@@ -1,0 +1,14 @@
+.navbar {
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-weight: 400;
+  /* font-style: normal; */
+  background-color: #185677;
+  color: #f1faee;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding: 5px;
+}
+
+#home-link {
+  color: #f1faee;
+}
