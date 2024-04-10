@@ -11,12 +11,12 @@
 <!-- Product List -->
 
 <ul>
-  <li>
+  <li
     @for (product of products; track product.id) {
       {{ product.name }}
     } @empty {
       Empty list of products
-    }
+    }>
     <input type="checkbox" (change)="updateProduct(product)">
     <span>{{ product }}</span>
     <button (click)="deleteProduct(product.id)">Delete</button>

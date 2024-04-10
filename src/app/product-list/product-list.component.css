@@ -1,0 +1,56 @@
+h1 {
+  color: #185677;
+  text-align: center;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 600px;
+}
+
+li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  border-bottom: 1px solid #202030;
+}
+
+span {
+  margin-left: 10px;
+}
+
+input[type="checkbox"] {
+  margin: 0 10px;
+}
+
+button {
+  padding: 5px 10px;
+  margin-left: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:first-of-type {
+  background-color: #5a8632;
+  color: #f1faee;
+}
+
+button:not(:first-of-type) {
+  background-color: #af5931;
+  color: #f1faee;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+.product-form {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0 20px 0;
+}
