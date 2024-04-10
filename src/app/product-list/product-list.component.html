@@ -1,0 +1,24 @@
+<h1>Phat Loot</h1>
+
+<div class="product-form">
+  <input
+  type="text"
+  [(ngModel)]="newProduct"
+  placeholder="Add a new product">
+  <button (click)="addProduct()">Add Product</button>
+</div>
+
+<!-- Product List -->
+
+<ul>
+  <li>
+    @for (product of products; track product.id) {
+      {{ product.name }}
+    } @empty {
+      Empty list of products
+    }
+    <input type="checkbox" (change)="updateProduct(product)">
+    <span>{{ product }}</span>
+    <button (click)="deleteProduct(product.id)">Delete</button>
+  </li>
+</ul>
