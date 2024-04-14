@@ -9,6 +9,28 @@
   padding: 5px;
 }
 
+.navbar-brand {
+  font-size: 2em;
+  font-weight: 700;
+  color: #f1faee;
+}
+
 #home-link {
+  color: #f1faee;
+}
+
+#login-button {
+  margin-left: 10px;
+  border-radius: 5px;
+  font-weight: 400;
+  background-color: #af5931;
+  color: #f1faee;
+}
+
+#signup-button {
+  margin-left: 10px;
+  border-radius: 5px;
+  font-weight: 400;
+  background-color: #af5931;
   color: #f1faee;
 }

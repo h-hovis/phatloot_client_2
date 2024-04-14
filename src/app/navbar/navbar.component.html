@@ -1,32 +1,34 @@
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
+<nav class="navbar fixed-top navbar-expand-lg">
   <div class="container-fluid">
     <a class="navbar-brand">PhatLoot</a>
     <button
     class="navbar-toggler"
     type="button"
     data-bs-toggle="collapse"
-    data-bs-target="#navbarSupportedContent"
-    aria-controls="navbarSupportedContent"
+    data-bs-target="#navbarToggler"
+    aria-controls="navbarToggler"
     aria-expanded="false"
     aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div
     class="collapse navbar-collapse"
-    id="navbarSupportedContent">
+    id="navbarCollapse">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item" id="home-link">
           <a
+          routerLink="/home"
           class="nav-link active"
+          id="home-link"
           aria-current="page">
           Home</a>
         </li>
-        <li class="nav-item" id="favorites-link">
+        <!-- <li class="nav-item" id="favorites-link">
           <a
           class="nav-link active">
           Favorites</a>
-        </li>
-        <li class="nav-item dropdown">
+        </li> -->
+        <!-- <li class="nav-item dropdown">
           <a
           class="nav-link dropdown-toggle"
           role="button"
@@ -41,20 +43,22 @@
             <li><a class="dropdown-item">Dice Sets</a></li>
             <li><a class="dropdown-item">Other</a></li>
           </ul>
+        </li> -->
+        <li class="nav-item">
+          <a
+          routerLink="/login"
+          class="btn btn-info"
+          name="login-button"
+          id="login-button">
+          Login</a>
         </li>
         <li class="nav-item">
-          <button
-          type="button"
+          <a
+          routerLink="/signup"
           class="btn btn-info"
-          name="login-button">
-          Login</button>
-        </li>
-        <li class="nav-item">
-          <button
-          type="button"
-          class="btn btn-info"
-          name="signup-button">
-          Sign Up</button>
+          name="signup-button"
+          id="signup-button">
+          Sign Up</a>
         </li>
         <!-- <li class="nav-item">
           <a class="nav-link disabled" aria-disabled="true">Disabled</a>
