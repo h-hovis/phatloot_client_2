@@ -7,7 +7,7 @@ import { Product } from '../models/product';
   providedIn: 'root'
 })
 export class ProductService {
-  private url = 'http://localhost:3000/products';
+  private url = 'http://127.0.0.1:3000/products';
 
   constructor(private http: HttpClient) { }
 
