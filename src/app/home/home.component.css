@@ -1,5 +1,6 @@
-* {
-  background-image: '../assets/img/TTRPG.jpg' opacity 25%;
+body {
+  background-color: #f1faee;
+  background-image: '../assets/img/TTRPG.jpg';
   background-size: cover;
   background-repeat: no-repeat;
 }

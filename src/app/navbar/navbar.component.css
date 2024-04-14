@@ -1,4 +1,7 @@
 .navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   font-weight: 400;
   /* font-style: normal; */
@@ -11,7 +14,7 @@
 
 .navbar-brand {
   font-size: 2em;
-  font-weight: 700;
+  font-weight: bold;
   color: #f1faee;
 }
 
@@ -20,17 +23,27 @@
 }
 
 #login-button {
-  margin-left: 10px;
-  border-radius: 5px;
+  margin-left: 5px;
+  border: 1px solid #f1faee;
+  border-radius: 4px;
+  font-size: 1rem;
   font-weight: 400;
+  padding: 0.5rem 1rem;
   background-color: #af5931;
   color: #f1faee;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
 
-#signup-button {
-  margin-left: 10px;
+#logout-button {
+  margin-left: 5px;
+  border: 1px solid #f1faee;
   border-radius: 5px;
+  font-size: 1rem;
   font-weight: 400;
+  padding: 0.5rem 1rem;
   background-color: #af5931;
   color: #f1faee;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
