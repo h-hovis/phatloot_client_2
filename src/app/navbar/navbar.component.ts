@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Subscription } from 'rxjs';
 import { AuthenticationService } from '../services/authentication.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
@@ -11,6 +12,7 @@ import { AuthenticationService } from '../services/authentication.service';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit{
+  openModal = false;
   isLoading = false;
   isNavbarActive = false;
   isAuthenticated = false;
@@ -24,7 +26,9 @@ export class NavbarComponent implements OnInit{
   ngOnInit(): void {
   }
 
-  login() {}
+  login() {
+    this.openModal = true;
+  }
 
   logout() {
     this.authService.logout();

@@ -9,12 +9,13 @@ class="card is-one-third column"
 style="width: 18rem;">
 @for (product of products; track product.id) {
   {{ product.name }}
-} @empty {
-  Empty list of products
 }
+<!-- @empty {
+  Empty list of products
+} -->
   <img
   src="{{ product.imageUrl }}" class="card-img-top"
-  alt="../assets/img/TTRPG.jpg">
+  alt="...">
   <div class="card-body">
     <h5 class="card-title">{{ product.name }}</h5>
     <h6 class="card-subtitle mb-2 text-body-secondary">{{ product.price }}</h6>

@@ -30,4 +30,9 @@ export class LoginComponent {
     });
   }
 
+  // onCancel() {
+  //   this.openModal = false;
+  //   this.router.navigate(['/home']);
+  // }
+
 }
