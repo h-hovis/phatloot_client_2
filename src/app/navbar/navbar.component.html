@@ -44,7 +44,19 @@
             <li><a class="dropdown-item">Other</a></li>
           </ul>
         </li> -->
-
+        @if (authService.isLoggedIn()){
+        <li
+        class="nav-item"
+        id="product-form-link">
+          <a
+          routerLink="/product-form"
+          class="btn btn-info"
+          name="add-product-button"
+          id="add-product-button"
+          >
+          Add Product</a>
+        </li>
+        }
       @if (authService.isLoggedIn()){
        <li class="nav-item">
         <button
@@ -58,6 +70,7 @@
       <li class="nav-item">
         <a
         routerLink="/login"
+        (click)="login()"
         data-bs-toggle="modal"
         data-bs-target="LoginModal"
         class="btn btn-info"

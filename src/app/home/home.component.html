@@ -1,17 +1,29 @@
-<app-product-list></app-product-list>
-
-<!-- <div class="card" style="width: 18rem;">
+<div class="container">
+<div class="title-header">
+  <h1>Choose Your Loot</h1>
+</div>
+<hr>
+<div class="columns is-justify-content-space-evenly">
+<div
+class="card is-one-third column"
+style="width: 18rem;">
+@for (product of products; track product.id) {
+  {{ product.name }}
+} @empty {
+  Empty list of products
+}
   <img
-  src="../assets/img/TTRPG.jpg" class="card-img-top"
-  alt="...">
+  src="{{ product.imageUrl }}" class="card-img-top"
+  alt="../assets/img/TTRPG.jpg">
   <div class="card-body">
     <h5 class="card-title">{{ product.name }}</h5>
     <h6 class="card-subtitle mb-2 text-body-secondary">{{ product.price }}</h6>
     <p class="card-text">{{ product.description }}</p>
   </div>
 </div>
-
-<ul>
+</div>
+</div>
+<!-- <ul>
   <li
     @for (product of products; track product.id) {
       {{ product.name }}
@@ -24,4 +36,4 @@
     <span>{{ product }}</span>
     <button (click)="deleteProduct(product.id)">Delete</button>
   </li>
-</ul> -->
+</ul>  -->

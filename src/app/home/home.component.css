@@ -1,6 +1,27 @@
-body {
-  background-color: #f1faee;
-  background-image: '../assets/img/TTRPG.jpg';
-  background-size: cover;
-  background-repeat: no-repeat;
+.container {
+  margin-top: 3rem;
 }
+
+.column {
+  margin: 20px;
+}
+
+.columns {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.card {
+  border-radius: 10px;
+  flex: 0 0 30%;
+  margin: 1%;
+}
+
+.title-header {
+  text-align: center;
+  font-size: 5rem;
+  font-weight: bold;
+  color: #af5931;
+}
+

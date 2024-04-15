@@ -22,6 +22,19 @@
   color: #f1faee;
 }
 
+#add-product-button {
+  margin-left: 5px;
+  border: 1px solid #f1faee;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 400;
+  padding: 0.5rem 1rem;
+  background-color: #5a8632;
+  color: #f1faee;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
 #login-button {
   margin-left: 5px;
   border: 1px solid #f1faee;
