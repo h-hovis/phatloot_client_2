@@ -1,7 +1,8 @@
 <h1>Your Loot</h1>
 
+<form [formGroup]="productForm">
 <div class="product-form mb-3">
-  <form>
+
   <label
   for="productName"
   class="form-label"
@@ -9,6 +10,7 @@
   <input
   type="text"
   class="form-control"
+  formControlName="name"
   [(ngModel)]="newProductName"
   placeholder="Product Name">
   <label
@@ -17,6 +19,7 @@
   <input
   type="text"
   class="form-control"
+  formControlName="category"
   [(ngModel)]="newProductCategory"
   placeholder="Product Category">
   <label
@@ -26,6 +29,7 @@
   <input
   type="decimal"
   class="form-control"
+  formControlName="price"
   [(ngModel)]="newProductPrice"
   placeholder="Enter Price">
   <label
@@ -35,6 +39,7 @@
   <textarea
   type="text-area"
   class="form-control"
+  formControlName="description"
   rows="2"
   [(ngModel)]="newProductDescription"
   placeholder="Describe your product here."
@@ -46,12 +51,13 @@
   <input
   type="text"
   class="form-control"
+  formControlName="imageUrl"
   [(ngModel)]="newProductImageUrl"
   placeholder="Enter Image URL">
   <button (click)="addProduct()">Add Product</button>
-  </form>
-</div>
 
+</div>
+</form>
 <!-- Product List -->
 <!-- <div class="card" style="width: 18rem;">
   <img

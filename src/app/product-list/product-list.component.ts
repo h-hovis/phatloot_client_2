@@ -2,16 +2,24 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Product } from '../models/product';
 import { ProductService } from '../services/product.service';
-import { FormControl, FormsModule } from '@angular/forms';
+import { FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-product-list',
   standalone: true,
-  imports: [FormsModule, CommonModule],
+  imports: [FormsModule, CommonModule, ReactiveFormsModule],
   templateUrl: './product-list.component.html',
   styleUrls: ['./product-list.component.css']
 })
 export class ProductListComponent implements OnInit{
+  productForm: FormGroup = new FormGroup({
+    name: new FormControl('', [Validators.required]),
+    category: new FormControl('', [Validators.required]),
+    price: new FormControl('', [Validators.required]),
+    description: new FormControl('', [Validators.required]),
+    imageUrl: new FormControl('')
+  });
+
   product: Product = new Product;
   products: Product[] = [];
   newProduct: string = '';
@@ -52,6 +60,8 @@ export class ProductListComponent implements OnInit{
       // reset input field after adding product
     });
   }
+
+
 
   updateProduct(product: Product) {
     this.productService.updateProduct(product).subscribe(updatedProduct => {

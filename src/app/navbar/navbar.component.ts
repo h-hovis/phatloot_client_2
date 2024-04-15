@@ -12,7 +12,6 @@ import { Router } from '@angular/router';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit{
-  openModal = false;
   isLoading = false;
   isNavbarActive = false;
   isAuthenticated = false;
@@ -26,8 +25,12 @@ export class NavbarComponent implements OnInit{
   ngOnInit(): void {
   }
 
-  login() {
-    this.openModal = true;
+  login(username: string, password: string) {
+    this.authService.login(username, password);
+  }
+
+  signUp(user: any) {
+    this.authService.signUp(user);
   }
 
   logout() {
