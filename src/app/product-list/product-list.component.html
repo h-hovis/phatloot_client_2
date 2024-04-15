@@ -1,6 +1,7 @@
 <h1>Your Loot</h1>
 
 <div class="product-form mb-3">
+  <form>
   <label
   for="productName"
   class="form-label"
@@ -48,6 +49,7 @@
   [(ngModel)]="newProductImageUrl"
   placeholder="Enter Image URL">
   <button (click)="addProduct()">Add Product</button>
+  </form>
 </div>
 
 <!-- Product List -->

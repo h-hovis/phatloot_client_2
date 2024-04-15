@@ -1,58 +1,44 @@
 import { Component } from '@angular/core';
 import { ProductService } from '../services/product.service';
 import { Product } from '../models/product';
+import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-product',
   standalone: true,
-  imports: [],
+  imports: [ReactiveFormsModule],
   templateUrl: './product.component.html',
   styleUrl: './product.component.css'
 })
 export class ProductComponent {
-  product: Product = new Product;
-  products: Product[] = [];
-  newProduct: string = '';
+  // productForm = new FormGroup({
+  //   name: new FormControl('', [Validators.required]),
+  //   category: new FormControl('', [Validators.required]),
+  //   price: new FormControl('', [Validators.required]),
+  //   description: new FormControl('', [Validators.required]),
+  //   imageUrl: new FormControl('')
+  // });
 
+  // constructor(private productService: ProductService, private router: Router) {}
 
-  constructor(private productService: ProductService) {}
+  // onSubmit() {
+  //   this.productService.createProduct(this.productForm.value).subscribe({
+  //     next: (product: Product) => {
+  //       console.log('Product created', product);
+  //       this.router.navigate(['/']);
+  //     },
+  //     error: (error: any) => {
+  //       console.error('Error creating product', error);
+  //     },
+  //   });
+  // }
 
-  ngOnInit(): void {
-    this.productService.getProducts().subscribe(products => this.products = products);
-  }
-
-  addProduct() {
-    if (!this.newProduct.trim()) {
-      // prevent adding empty product
-      return;
-    }
-
-    const product = {
-      name: this.newProduct,
-      category: 'Other',
-      price: 9.99,
-      description: 'New product',
-      imageUrl: 'https://via.placeholder.com/150'
-    };
-
-    this.productService.createProduct(product).subscribe(newProduct => {
-      this.products.push(newProduct);
-      this.newProduct = ''; // reset input field after adding product
-    });
-  }
-
-  updateProduct(product: Product) {
-    this.productService.updateProduct(product).subscribe(updatedProduct => {
-      const index = this.products.findIndex(p => p.id === updatedProduct.id);
-      this.products[index] = updatedProduct;
-    });
-  }
-
-  deleteProduct(id: number) {
-    this.productService.deleteProduct(id).subscribe({
-      next: () => this.products = this.products.filter(product => product.id !== id),
-      error: (err) => console.error(err)
-    });
-  }
+  // deleteProduct(id: number) {
+  //   this.productService.deleteProduct(id).subscribe({
+  //     next: () => this.products = this.products.filter(product => product.id !== id),
+  //     error: (err) => console.error(err)
+  //   });
+  // }
 
 }
