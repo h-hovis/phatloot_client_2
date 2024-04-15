@@ -44,25 +44,29 @@
             <li><a class="dropdown-item">Other</a></li>
           </ul>
         </li> -->
-
-      <li class="nav-item">
-        <a
+    <div class="nav-links">
+      @if (authService.isLoggedIn()){
+       <!-- <li class="nav-item"> -->
+        <button
         class="btn btn-info"
         name="logout-button"
         id="logout-button"
         (click)="logout()">
-        Logout</a>
-      </li>
-
-      <li class="nav-item">
+        Logout</button>
+      <!-- </li> -->
+    }@else {
+      <!-- <li class="nav-item"> -->
         <a
+        routerLink="/login"
         data-bs-toggle="modal"
         data-bs-target="LoginModal"
         class="btn btn-info"
         name="login-button"
         id="login-button">
         Login</a>
-      </li>
+      <!-- </li> -->
+    }
+    </div>
       </ul>
     </div>
   </div>
