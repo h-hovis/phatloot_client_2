@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Product } from '../models/product';
 import { ProductService } from '../services/product.service';
-import { FormsModule } from '@angular/forms';
+import { FormControl, FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-product-list',
@@ -15,6 +15,11 @@ export class ProductListComponent implements OnInit{
   product: Product = new Product;
   products: Product[] = [];
   newProduct: string = '';
+  newProductName: string = '';
+  newProductCategory: string = '';
+  newProductPrice: number = 0;
+  newProductDescription: string = '';
+  newProductImageUrl: string = '';
 
 
   constructor(private productService: ProductService) {}
@@ -30,16 +35,21 @@ export class ProductListComponent implements OnInit{
     }
 
     const product = {
-      name: this.newProduct,
-      category: 'Other',
-      price: 9.99,
-      description: 'New product',
-      imageUrl: 'https://via.placeholder.com/150'
+      name: this.newProductName,
+      category: this.newProductCategory,
+      price: this.newProductPrice,
+      description: this.newProductDescription,
+      imageUrl: this.newProductImageUrl
     };
 
     this.productService.createProduct(product).subscribe(newProduct => {
       this.products.push(newProduct);
-      this.newProduct = ''; // reset input field after adding product
+      this.newProductName = '';
+      this.newProductCategory = '';
+      this.newProductPrice = 0;
+      this.newProductDescription = '';
+      this.newProductImageUrl = '';
+      // reset input field after adding product
     });
   }
 

@@ -29,9 +29,9 @@ input[type="checkbox"] {
 }
 
 button {
-  padding: 5px 10px;
+  padding: 0.5rem 1rem;
   margin-left: 10px;
-  border: none;
+  border: 1px solid #f1faee;
   border-radius: 5px;
   cursor: pointer;
 }
@@ -51,7 +51,13 @@ button:hover {
 }
 
 .product-form {
+  max-width: 400px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #f1faee;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   display: flex;
-  justify-content: center;
-  margin: 20px 0 20px 0;
+  flex-direction: column;
+  gap: 1rem;
 }

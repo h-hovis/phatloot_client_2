@@ -1,15 +1,57 @@
-<h1>Choose Your Loot</h1>
+<h1>Your Loot</h1>
 
-<div class="product-form">
+<div class="product-form mb-3">
+  <label
+  for="productName"
+  class="form-label"
+  >Product Name:</label>
   <input
   type="text"
-  [(ngModel)]="newProduct"
-  placeholder="Add a new product">
+  class="form-control"
+  [(ngModel)]="newProductName"
+  placeholder="Product Name">
+  <label
+  for="productCategory" class="form-label"
+  >Product Category:</label>
+  <input
+  type="text"
+  class="form-control"
+  [(ngModel)]="newProductCategory"
+  placeholder="Product Category">
+  <label
+  for="productPrice"
+  class="form-label"
+  >Product Price:</label>
+  <input
+  type="decimal"
+  class="form-control"
+  [(ngModel)]="newProductPrice"
+  placeholder="Enter Price">
+  <label
+  for="productDescription"
+  class="form-label"
+  >Product Description:</label>
+  <textarea
+  type="text-area"
+  class="form-control"
+  rows="2"
+  [(ngModel)]="newProductDescription"
+  placeholder="Describe your product here."
+  ></textarea>
+  <label
+  for="productImageUrl"
+  class="form-label"
+  >Product Image</label>
+  <input
+  type="text"
+  class="form-control"
+  [(ngModel)]="newProductImageUrl"
+  placeholder="Enter Image URL">
   <button (click)="addProduct()">Add Product</button>
 </div>
 
 <!-- Product List -->
-<div class="card" style="width: 18rem;">
+<!-- <div class="card" style="width: 18rem;">
   <img
   src="../assets/img/TTRPG.jpg" class="card-img-top"
   alt="...">
@@ -18,7 +60,7 @@
     <h6 class="card-subtitle mb-2 text-body-secondary">{{ product.price }}</h6>
     <p class="card-text">{{ product.description }}</p>
   </div>
-</div>
+</div> -->
 
 <ul>
   <li
@@ -27,8 +69,15 @@
     } @empty {
       Empty list of products
     }>
-    <input type="checkbox" (change)="updateProduct(product)">
-    <span>{{ product }}</span>
+    <input
+    type="checkbox"
+    (change)="updateProduct(product)">
+    <span>{{ product.name }}</span>
+    <span>{{ product.category }}</span>
+    <span>{{ product.price }}</span>
+    <span>{{ product.description }}</span>
+    <button (click)="updateProduct(product)">Edit</button>
     <button (click)="deleteProduct(product.id)">Delete</button>
   </li>
 </ul>
+

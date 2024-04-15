@@ -9,7 +9,7 @@ body {
 }
 
 body {
-  background-image: '../assets/img/TTRPG.jpg';
+  background-image: './assets/img/TTRPG.jpg';
   background-size: cover;
   background-repeat: no-repeat;
 }
