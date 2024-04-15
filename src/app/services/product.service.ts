@@ -23,6 +23,10 @@ export class ProductService {
     return this.http.post<Product>(this.url, product);
   }
 
+  getMyProducts(): Observable<Product[]> {
+    return this.http.get<Product[]>(`http://localhost:3000/my-products`);
+  }
+
   updateProduct(product: Product): Observable<Product> {
     return this.http.put<Product>(`${this.url}/${product.id}`, product);
   }
