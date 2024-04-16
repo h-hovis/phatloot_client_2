@@ -12,28 +12,21 @@ import { FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators } 
   styleUrls: ['./product-list.component.css']
 })
 export class ProductListComponent implements OnInit{
-  productForm: FormGroup = new FormGroup({
-    name: new FormControl('', [Validators.required]),
-    category: new FormControl('', [Validators.required]),
-    price: new FormControl('', [Validators.required]),
-    description: new FormControl('', [Validators.required]),
-    imageUrl: new FormControl('')
-  });
 
   product: Product = new Product;
   products: Product[] = [];
   newProduct: string = '';
   newProductName: string = '';
   newProductCategory: string = '';
-  newProductPrice: number = 0;
+  // newProductPrice: number = 0;
   newProductDescription: string = '';
-  newProductImageUrl: string = '';
+  // newProductImageUrl: string = '';
 
 
   constructor(private productService: ProductService) {}
 
   ngOnInit(): void {
-    this.productService.getMyProducts().subscribe(products => this.products = products);
+    // this.productService.getMyProducts().subscribe(products => this.products = products);
   }
 
   addProduct() {
@@ -45,18 +38,18 @@ export class ProductListComponent implements OnInit{
     const product = {
       name: this.newProductName,
       category: this.newProductCategory,
-      price: this.newProductPrice,
+      // price: this.newProductPrice,
       description: this.newProductDescription,
-      imageUrl: this.newProductImageUrl
+      // imageUrl: this.newProductImageUrl
     };
 
     this.productService.createProduct(product).subscribe(newProduct => {
       this.products.push(newProduct);
       this.newProductName = '';
       this.newProductCategory = '';
-      this.newProductPrice = 0;
+      // this.newProductPrice = 0;
       this.newProductDescription = '';
-      this.newProductImageUrl = '';
+      // this.newProductImageUrl = '';
       // reset input field after adding product
     });
 

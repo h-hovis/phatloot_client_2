@@ -1,6 +1,6 @@
 <h1>Your Loot</h1>
 
-<form [formGroup]="productForm">
+<form>
 <div class="product-form mb-3">
 
   <label
@@ -10,7 +10,7 @@
   <input
   type="text"
   class="form-control"
-  formControlName="name"
+  name="productName"
   [(ngModel)]="newProductName"
   placeholder="Product Name">
   <label
@@ -19,19 +19,19 @@
   <input
   type="text"
   class="form-control"
-  formControlName="category"
+  name="productCategory"
   [(ngModel)]="newProductCategory"
   placeholder="Product Category">
-  <label
+  <!-- <label
   for="productPrice"
   class="form-label"
   >Product Price:</label>
   <input
   type="decimal"
   class="form-control"
-  formControlName="price"
+  name="productPrice"
   [(ngModel)]="newProductPrice"
-  placeholder="Enter Price">
+  placeholder="Enter Price"> -->
   <label
   for="productDescription"
   class="form-label"
@@ -39,21 +39,21 @@
   <textarea
   type="text-area"
   class="form-control"
-  formControlName="description"
+  name="productDescription"
   rows="2"
   [(ngModel)]="newProductDescription"
   placeholder="Describe your product here."
   ></textarea>
-  <label
+  <!-- <label
   for="productImageUrl"
   class="form-label"
   >Product Image</label>
   <input
   type="text"
   class="form-control"
-  formControlName="imageUrl"
+  name="productImageUrl"
   [(ngModel)]="newProductImageUrl"
-  placeholder="Enter Image URL">
+  placeholder="Enter Image URL"> -->
   <button (click)="addProduct()">Add Product</button>
 
 </div>
@@ -70,6 +70,7 @@
   </div>
 </div> -->
 
+<!-- <div class="container">
 <ul>
   <li
     @for (product of products; track product.id) {
@@ -88,4 +89,4 @@
     <button (click)="deleteProduct(product.id)">Delete</button>
   </li>
 </ul>
-
+</div> -->

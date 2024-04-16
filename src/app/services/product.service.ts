@@ -7,7 +7,7 @@ import { Product } from '../models/product';
   providedIn: 'root'
 })
 export class ProductService {
-  private url = 'http://localhost:3000/products';
+  private url = 'http://127.0.0.1:3000/products';
 
   constructor(private http: HttpClient) { }
 
@@ -19,13 +19,13 @@ export class ProductService {
     return this.http.get<Product>(`${this.url}/${id}`);
   }
 
-  createProduct(product: { name: string; category: string; price: number; description: string; imageUrl: string }): Observable<Product> {
+  createProduct(product: { name: string; category: string; description: string }): Observable<Product> {
     return this.http.post<Product>(this.url, product);
   }
 
-  getMyProducts(): Observable<Product[]> {
-    return this.http.get<Product[]>(`http://localhost:3000/my-products`);
-  }
+  // getMyProducts(): Observable<Product[]> {
+  //   return this.http.get<Product[]>(`${this.url}/${my_products}`);
+  // }
 
   updateProduct(product: Product): Observable<Product> {
     return this.http.put<Product>(`${this.url}/${product.id}`, product);

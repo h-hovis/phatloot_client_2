@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { Subscription } from 'rxjs';
 import { AuthenticationService } from '../services/authentication.service';
 import { Router } from '@angular/router';
+import { ProductService } from '../services/product.service';
 
 @Component({
   selector: 'app-navbar',
@@ -16,7 +17,7 @@ export class NavbarComponent implements OnInit{
   isNavbarActive = false;
   isAuthenticated = false;
 
-  constructor(public authService: AuthenticationService, private router: Router) {}
+  constructor(public authService: AuthenticationService, public productService: ProductService, private router: Router) {}
 
   toggleNav(){
     this.isNavbarActive=!this.isNavbarActive;
@@ -25,12 +26,13 @@ export class NavbarComponent implements OnInit{
   ngOnInit(): void {
   }
 
-  login(username: string, password: string) {
-    this.authService.login(username, password);
+
+  login() {
+    this.authService.login('username', 'password');
   }
 
-  signUp(user: any) {
-    this.authService.signUp(user);
+  signUp() {
+    this.authService.signUp('user');
   }
 
   logout() {
