@@ -16,7 +16,7 @@ export class NavbarComponent implements OnInit{
   isNavbarActive = false;
   isAuthenticated = false;
 
-  constructor(public authService: AuthenticationService) {}
+  constructor(public authService: AuthenticationService, private router: Router) {}
 
   toggleNav(){
     this.isNavbarActive=!this.isNavbarActive;

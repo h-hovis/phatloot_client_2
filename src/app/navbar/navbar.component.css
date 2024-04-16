@@ -5,8 +5,8 @@
   font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   font-weight: 400;
   /* font-style: normal; */
-  background-color: #185677;
-  color: #f1faee;
+  background-color: #8a1c7c;
+  color: #eaeaea;
   margin-top: 5px;
   margin-bottom: 5px;
   padding: 5px;
@@ -15,62 +15,62 @@
 .navbar-brand {
   font-size: 2em;
   font-weight: bold;
-  color: #f1faee;
+  color: #eaeaea;
 }
 
 #home-link {
   font-size: 1.5rem;
-  color: #f1faee;
+  color: #eaeaea;
 }
 
 #add-product-button {
   margin-left: 5px;
-  border: 1px solid #f1faee;
+  border: 1px solid #eaeaea;
   border-radius: 4px;
   font-size: 1rem;
   font-weight: 400;
   padding: 0.5rem 1rem;
-  background-color: #5a8632;
-  color: #f1faee;
+  background-color: #0b5351;
+  color: #eaeaea;
   cursor: pointer;
   transition: background-color 0.3s;
 }
 
 #login-button {
   margin-left: 5px;
-  border: 1px solid #f1faee;
+  border: 1px solid #eaeaea;
   border-radius: 4px;
   font-size: 1.5rem;
   font-weight: 400;
   padding: 0.5rem 1rem;
-  background-color: #af5931;
-  color: #f1faee;
+  background-color: #0b5351;
+  color: #eaeaea;
   cursor: pointer;
   transition: background-color 0.3s;
 }
 
 #signup-button {
   margin-left: 5px;
-  border: 1px solid #f1faee;
+  border: 1px solid #eaeaea;
   border-radius: 4px;
   font-size: 1.5rem;
   font-weight: 400;
   padding: 0.5rem 1rem;
-  background-color: #af5931;
-  color: #f1faee;
+  background-color: #0b5351;
+  color: #eaeaea;
   cursor: pointer;
   transition: background-color 0.3s;
 }
 
 #logout-button {
   margin-left: 5px;
-  border: 1px solid #f1faee;
+  border: 1px solid #eaeaea;
   border-radius: 5px;
   font-size: 1rem;
   font-weight: 400;
   padding: 0.5rem 1rem;
-  background-color: #af5931;
-  color: #f1faee;
+  background-color: #0b5351;
+  color: #eaeaea;
   cursor: pointer;
   transition: background-color 0.3s;
 }

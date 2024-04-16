@@ -1,5 +1,5 @@
 h1 {
-  color: #af5931;
+  color: #0b5351;
   font-size: 3rem;
   font-weight: bold;
   text-align: center;
@@ -18,7 +18,7 @@ li {
   align-items: center;
   justify-content: space-between;
   padding: 10px;
-  border-bottom: 1px solid #202030;
+  border-bottom: 1px solid #1f0322;
 }
 
 span {
@@ -33,19 +33,19 @@ button {
   padding: 0.5rem 1rem;
   margin-left: 10px;
   margin-top: 5px;
-  border: 1px solid #f1faee;
+  border: 1px solid #eaeaea;
   border-radius: 5px;
   cursor: pointer;
 }
 
 button:first-of-type {
-  background-color: #5a8632;
-  color: #f1faee;
+  background-color: #0b5351;
+  color: #eaeaea;
 }
 
 button:not(:first-of-type) {
-  background-color: #af5931;
-  color: #f1faee;
+  background-color: #91c499;
+  color: #eaeaea;
 }
 
 button:hover {
@@ -56,7 +56,7 @@ button:hover {
   max-width: 400px;
   margin: 2rem auto;
   padding: 2rem;
-  background-color: #f1faee;
+  background-color: #eaeaea;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   display: flex;
@@ -66,11 +66,11 @@ button:hover {
 
 .product-form label {
   font-size: 1.2rem;
-  color: #202030;
+  color: #1f0322;
 }
 
 .form-control {
   padding: 0.5rem;
-  border: 1px solid #202030;
+  border: 1px solid #1f0322;
   border-radius: 5px;
 }
