@@ -59,6 +59,7 @@ export class ProductListComponent implements OnInit{
       this.newProductImageUrl = '';
       // reset input field after adding product
     });
+
   }
 
 
