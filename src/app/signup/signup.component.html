@@ -2,12 +2,39 @@
   <h2>Sign Up</h2>
   <form (ngSubmit)="onSubmit()" #signupForm="ngForm">
     <div class="form-group">
+      <label for="firstName">First Name</label>
+      <input
+      type="text"
+      id="firstName"
+      name="firstName"
+      [(ngModel)]="user.firstName"
+      required>
+    </div>
+    <div class="form-group">
+      <label for="lastName">Last Name</label>
+      <input
+      type="text"
+      id="lastName"
+      name="lastName"
+      [(ngModel)]="user.lastName"
+      required>
+    </div>
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input
+      type="email"
+      id="email"
+      name="email"
+      [(ngModel)]="user.email"
+      required>
+    </div>
+    <div class="form-group">
       <label for="username">Username</label>
       <input
       type="text"
       id="username"
-      [(ngModel)]="user.username"
       name="username"
+      [(ngModel)]="user.username"
       required>
     </div>
     <div class="form-group">
@@ -15,8 +42,8 @@
       <input
       type="password"
       id="password"
-      [(ngModel)]="user.password"
       name="password"
+      [(ngModel)]="user.password"
       required>
     </div>
     <div class="form-group">
@@ -24,8 +51,8 @@
       <input
       type="password"
       id="password_confirmation"
-      [(ngModel)]="user.password_confirmation"
       name="password_confirmation"
+      [(ngModel)]="user.password_confirmation"
       required>
     </div>
 

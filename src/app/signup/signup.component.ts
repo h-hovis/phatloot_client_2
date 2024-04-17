@@ -12,6 +12,9 @@ import { FormsModule } from '@angular/forms';
 })
 export class SignupComponent {
   user = {
+    firstName: '',
+    lastName: '',
+    email: '',
     username: '',
     password: '',
     password_confirmation: '',

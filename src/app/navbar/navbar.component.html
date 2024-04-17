@@ -16,14 +16,14 @@
     <div>
 
       <ul class="nav">
-        <li class="nav-item" id="home-link">
+        <!-- <li class="nav-item" id="home-link">
           <a
           routerLink="/home"
           class="nav-link active"
           id="home-link"
           aria-current="page">
           Home</a>
-        </li>
+        </li> -->
         <!-- <li class="nav-item" id="favorites-link">
           <a
           class="nav-link active">
@@ -50,10 +50,11 @@
         class="nav-item"
         id="product-form-link">
           <a
-          routerLink="/product-form"
-          class="btn btn-info"
+          routerLink="/product"
+          class="btn nav-link active"
           name="add-product-button"
           id="add-product-button"
+          (click)="addProduct()"
           >
           Add Product</a>
         </li>
@@ -61,7 +62,7 @@
       @if (authService.isLoggedIn()){
        <li class="nav-item">
         <button
-        class="btn btn-info"
+        class="btn nav-link active"
         name="logout-button"
         id="logout-button"
         (click)="logout()">
@@ -71,10 +72,10 @@
       <li class="nav-item">
         <a
         routerLink="/login"
-        (click)="login()"
-        class="btn btn-info"
+        class="btn nav-link active"
         name="login-button"
         id="login-button"
+        (click)="login()"
         >
         Login</a>
       </li>
@@ -82,10 +83,11 @@
       <li class="nav-item">
         <a
         routerLink="/signup"
-        (click)="signUp()"
-        class="btn btn-info"
+        class="btn nav-link active"
         name="signup-button"
-        id="signup-button">
+        id="signup-button"
+        (click)="signUp()"
+        >
         Sign Up</a>
       </li>
 

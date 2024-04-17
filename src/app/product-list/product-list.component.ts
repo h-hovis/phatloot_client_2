@@ -13,49 +13,20 @@ import { FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators } 
 })
 export class ProductListComponent implements OnInit{
 
-  product: Product = new Product;
   products: Product[] = [];
-  newProduct: string = '';
-  newProductName: string = '';
-  newProductCategory: string = '';
-  // newProductPrice: number = 0;
-  newProductDescription: string = '';
-  // newProductImageUrl: string = '';
-
+  product = {
+    id: 0,
+    name: '',
+    price: 0,
+    description: '',
+    image: '',
+  };
 
   constructor(private productService: ProductService) {}
 
   ngOnInit(): void {
     // this.productService.getMyProducts().subscribe(products => this.products = products);
   }
-
-  addProduct() {
-    if (!this.newProduct.trim()) {
-      // prevent adding empty product
-      return;
-    }
-
-    const product = {
-      name: this.newProductName,
-      category: this.newProductCategory,
-      // price: this.newProductPrice,
-      description: this.newProductDescription,
-      // imageUrl: this.newProductImageUrl
-    };
-
-    this.productService.createProduct(product).subscribe(newProduct => {
-      this.products.push(newProduct);
-      this.newProductName = '';
-      this.newProductCategory = '';
-      // this.newProductPrice = 0;
-      this.newProductDescription = '';
-      // this.newProductImageUrl = '';
-      // reset input field after adding product
-    });
-
-  }
-
-
 
   updateProduct(product: Product) {
     this.productService.updateProduct(product).subscribe(updatedProduct => {

@@ -26,6 +26,9 @@ export class NavbarComponent implements OnInit{
   ngOnInit(): void {
   }
 
+  addProduct() {
+    this.router.navigate(['/product']);
+  }
 
   login() {
     this.authService.login('username', 'password');

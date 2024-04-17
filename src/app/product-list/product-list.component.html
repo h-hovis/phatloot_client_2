@@ -1,65 +1,13 @@
-<h1>Your Loot</h1>
+<h1>My Loot Wish List</h1>
 
-<form>
-<div class="product-form mb-3">
 
-  <label
-  for="productName"
-  class="form-label"
-  >Product Name:</label>
-  <input
-  type="text"
-  class="form-control"
-  name="productName"
-  [(ngModel)]="newProductName"
-  placeholder="Product Name">
-  <label
-  for="productCategory" class="form-label"
-  >Product Category:</label>
-  <input
-  type="text"
-  class="form-control"
-  name="productCategory"
-  [(ngModel)]="newProductCategory"
-  placeholder="Product Category">
-  <!-- <label
-  for="productPrice"
-  class="form-label"
-  >Product Price:</label>
-  <input
-  type="decimal"
-  class="form-control"
-  name="productPrice"
-  [(ngModel)]="newProductPrice"
-  placeholder="Enter Price"> -->
-  <label
-  for="productDescription"
-  class="form-label"
-  >Product Description:</label>
-  <textarea
-  type="text-area"
-  class="form-control"
-  name="productDescription"
-  rows="2"
-  [(ngModel)]="newProductDescription"
-  placeholder="Describe your product here."
-  ></textarea>
-  <!-- <label
-  for="productImageUrl"
-  class="form-label"
-  >Product Image</label>
-  <input
-  type="text"
-  class="form-control"
-  name="productImageUrl"
-  [(ngModel)]="newProductImageUrl"
-  placeholder="Enter Image URL"> -->
-  <button (click)="addProduct()">Add Product</button>
-
-</div>
-</form>
 <!-- Product List -->
-<!-- <div class="card" style="width: 18rem;">
+<div class="card">
+  @for (product of products; track product.id) {
+    {{ product.name }}
+  } @empty {
+    Empty list of products
+  }
   <img
   src="../assets/img/TTRPG.jpg" class="card-img-top"
   alt="...">
@@ -67,26 +15,11 @@
     <h5 class="card-title">{{ product.name }}</h5>
     <h6 class="card-subtitle mb-2 text-body-secondary">{{ product.price }}</h6>
     <p class="card-text">{{ product.description }}</p>
+    <button
+    class="btn"
+    (click)="updateProduct">Update</button>
+    <button
+    class="btn"
+    (click)="deleteProduct">Delete</button>
   </div>
-</div> -->
-
-<!-- <div class="container">
-<ul>
-  <li
-    @for (product of products; track product.id) {
-      {{ product.name }}
-    } @empty {
-      Empty list of products
-    }>
-    <input
-    type="checkbox"
-    (change)="updateProduct(product)">
-    <span>{{ product.name }}</span>
-    <span>{{ product.category }}</span>
-    <span>{{ product.price }}</span>
-    <span>{{ product.description }}</span>
-    <button (click)="updateProduct(product)">Edit</button>
-    <button (click)="deleteProduct(product.id)">Delete</button>
-  </li>
-</ul>
-</div> -->
+</div>

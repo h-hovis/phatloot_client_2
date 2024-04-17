@@ -3,7 +3,6 @@ h1 {
   font-size: 3rem;
   font-weight: bold;
   text-align: center;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 ul {
@@ -39,17 +38,30 @@ button {
 }
 
 button:first-of-type {
-  background-color: #0b5351;
+  background-color: #91c499;
   color: #eaeaea;
 }
 
 button:not(:first-of-type) {
-  background-color: #91c499;
+  background-color: #0b5351;
   color: #eaeaea;
 }
 
 button:hover {
   opacity: 0.8;
+}
+
+.card {
+  max-width: 400px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #eaeaea;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
 }
 
 .product-form {
