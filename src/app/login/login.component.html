@@ -1,16 +1,16 @@
-<form (ngSubmit)="login()">
+<form (ngSubmit)="login()" [formGroup]="loginForm">
   <input
   type="text"
-  [(ngModel)]="username"
+  formControlName="username"
   name="username"
   placeholder="Username"
-  required>
+  >
   <input
   type="password"
-  [(ngModel)]="password"
+  formControlName="password"
   name="password"
   placeholder="Password"
-  required>
+  >
   <button type="submit">Login</button>
 </form>
 <!-- Modal -->

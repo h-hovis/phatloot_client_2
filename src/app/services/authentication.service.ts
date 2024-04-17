@@ -13,7 +13,7 @@ export class AuthenticationService {
   constructor(private http: HttpClient, private router: Router) {}
 
   login(username: string, password: string) {
-    return this.http.post<{ token: string }>('http://127.0.0.1:3000/login', {
+    return this.http.post<{ token: string }>('http://localhost:3000/login', {
       username,
       password,
     });
@@ -25,7 +25,6 @@ export class AuthenticationService {
 
   setToken(token: string) {
     localStorage.setItem('token', token);
-    this.tokenSubject.next(token);
   }
 
   getToken() {
@@ -37,8 +36,7 @@ export class AuthenticationService {
   }
 
   logout() {
-    localStorage.removeItem('token'),
-    this.tokenSubject.next(null);
+    localStorage.removeItem('token');
     this.router.navigate(['/login']);
   }
 }
