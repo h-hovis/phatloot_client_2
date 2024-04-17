@@ -34,19 +34,6 @@ export class SignupComponent {
         console.error('sign up failed', error);
       },
     });
-    // if (this.user.password === this.user.password_confirmation) {
-    //   this.authService.signUp(this.user).subscribe({
-    //     next: (res: any) => {
-    //       console.log('Sign up successful', res);
-    //       this.router.navigate(['/login']);
-    //     },
-    //     error: (error: any) => {
-    //       console.error('sign up failed', error);
-    //     },
-    //   });
-    // } else {
-    //   console.error('Passwords do not match');
-    // }
   }
 
 

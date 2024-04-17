@@ -1,4 +1,4 @@
-<form>
+<form (ngSubmit)="onSubmit()" [formGroup]="productForm">
   <div class="product-form mb-3">
 
     <label
@@ -9,7 +9,7 @@
     type="text"
     class="form-control"
     name="productName"
-    [(ngModel)]="newProductName"
+    formControlName="name"
     placeholder="Product Name">
     <label
     for="productCategory" class="form-label"
@@ -18,7 +18,7 @@
     type="text"
     class="form-control"
     name="productCategory"
-    [(ngModel)]="newProductCategory"
+    formControlName="category"
     placeholder="Product Category">
     <!-- <label
     for="productPrice"
@@ -28,7 +28,7 @@
     type="decimal"
     class="form-control"
     name="productPrice"
-    [(ngModel)]="newProductPrice"
+    formControlName="price"
     placeholder="Enter Price"> -->
     <label
     for="productDescription"
@@ -39,7 +39,7 @@
     class="form-control"
     name="productDescription"
     rows="2"
-    [(ngModel)]="newProductDescription"
+    formControlName="description"
     placeholder="Describe your product here."
     ></textarea>
     <!-- <label
@@ -50,9 +50,9 @@
     type="text"
     class="form-control"
     name="productImageUrl"
-    [(ngModel)]="newProductImageUrl"
+    formControlName="imageUrl"
     placeholder="Enter Image URL"> -->
-    <button (click)="addProduct()">Add Product</button>
+    <button type="submit">Add Product</button>
 
   </div>
   </form>

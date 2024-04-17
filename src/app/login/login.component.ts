@@ -22,7 +22,7 @@ export class LoginComponent {
   login() {
     const password = this.loginForm.value.password;
     const username = this.loginForm.value.username;
-      console.log('Logging in with username:', username, 'and password:', password)
+
     this.authService.login(username, password).subscribe({
       next: (res: any) => {
         console.log('Logged in with token:', res.token);
@@ -32,21 +32,6 @@ export class LoginComponent {
         console.error('Login error', error);
       },
     });
-    // this.authService.login(this.username, this.password).subscribe({
-    //   next: (res: any) => {
-    //     console.log('Logged in with token:', res.token);
-    //     this.authService.setToken(res.token);
-    //     this.router.navigate(['/home']);
-    //   },
-    //   error: (error: any) => {
-    //     console.error('Login error', error);
-    //   },
-    // });
   }
-
-  // onCancel() {
-  //   this.openModal = false;
-  //   this.router.navigate(['/home']);
-  // }
 
 }

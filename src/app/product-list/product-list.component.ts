@@ -2,12 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Product } from '../models/product';
 import { ProductService } from '../services/product.service';
-import { FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
+
 
 @Component({
   selector: 'app-product-list',
   standalone: true,
-  imports: [FormsModule, CommonModule, ReactiveFormsModule],
+  imports: [CommonModule],
   templateUrl: './product-list.component.html',
   styleUrls: ['./product-list.component.css']
 })
