@@ -8,6 +8,11 @@ body {
   box-sizing: border-box;
 }
 
+body {
+  background: url(./assets/img/TTRPG.jpg) no-repeat center fixed;
+  background-size: cover;
+}
+
 .metamorphous-regular {
   font-family: "Metamorphous", serif;
   font-weight: 400;
