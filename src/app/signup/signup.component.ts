@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { AuthenticationService } from '../services/authentication.service';
 import { Router } from '@angular/router';
-import { FormControl, FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-signup',
@@ -12,12 +12,12 @@ import { FormControl, FormGroup, FormsModule, ReactiveFormsModule } from '@angul
 })
 export class SignupComponent {
   signUpForm: FormGroup = new FormGroup ({
-    first_name: new FormControl(''),
-    last_name: new FormControl(''),
-    email: new FormControl(''),
-    username: new FormControl(''),
-    password: new FormControl(''),
-    password_confirmation: new FormControl('')
+    first_name: new FormControl('', Validators.required),
+    last_name: new FormControl('', Validators.required),
+    email: new FormControl('', Validators.required),
+    username: new FormControl('', Validators.required),
+    password: new FormControl('', Validators.required),
+    password_confirmation: new FormControl('', Validators.required)
   });
 
   constructor(private authService: AuthenticationService, private router: Router) {}
