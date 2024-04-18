@@ -20,8 +20,8 @@ export class LoginComponent {
   constructor(private authService: AuthenticationService, private router: Router) {}
 
   login() {
-    const password = this.loginForm.value.password;
     const username = this.loginForm.value.username;
+    const password = this.loginForm.value.password;
 
     this.authService.login(username, password).subscribe({
       next: (res: any) => {
