@@ -1,7 +1,7 @@
 .navbar {
   display: flex;
+  align-content: flex-start;
   justify-content: space-between;
-  align-items: center;
   font-weight: 400;
   background-color: #8a1c7c;
   color: #eaeaea;
@@ -16,8 +16,9 @@
 }
 
 #home-link {
-  font-size: 1rem;
+  font-size: 1.5rem;
   color: #eaeaea;
+  margin-left: 5px;
 }
 
 #add-product-button {
