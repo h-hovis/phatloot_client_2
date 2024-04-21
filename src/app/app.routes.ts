@@ -12,7 +12,7 @@ export const routes: Routes = [
   },
 
   { path: 'login',
-    loadComponent: () => import('./login/login.component').then(m => m.LoginComponent),
+    loadComponent: () => import('./login/login.component').then((m) => m.LoginComponent),
     canActivate: [noAuthGuard],
   },
 

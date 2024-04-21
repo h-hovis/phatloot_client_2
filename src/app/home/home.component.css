@@ -8,7 +8,7 @@
   margin-bottom: 10px;
   margin: 2rem auto;
   padding: 2rem;
-  background-color: #0b5351;
+  background-color: #0f6d6a;
   border-radius: 8px;
 }
 
@@ -34,4 +34,12 @@ p {
   font-weight: bolder;
   color: #8a1c7c;
   cursor: pointer;
+}
+
+#signup:hover {
+  color: #4dc65f;
+}
+
+#login:hover {
+  color: #c511ad;
 }

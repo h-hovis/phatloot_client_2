@@ -49,5 +49,7 @@
     type="submit"
     class="btn"
     [disabled]="!signUpForm.valid">Sign Up</button>
+
+    <p>Already registered? <a routerLink="['/login']" routerLinkActive="router-link-active=" (click)="login()">Log in</a></p>
   </form>
 </div>

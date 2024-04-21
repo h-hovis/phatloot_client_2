@@ -36,5 +36,8 @@ export class SignupComponent {
     });
   }
 
+  login() {
+    this.authService.login('username', 'password');
+  }
 
 }

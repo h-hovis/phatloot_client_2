@@ -46,6 +46,20 @@
   background-color: #0b5351;
 }
 
+p {
+  margin-top: 1rem;
+  font-size: 0.75rem;
+  color: #1f0322;
+  text-align: center;
+}
+
+p a {
+  color: #8a1c7c;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+}
+
 .error-message {
   color: #a30303;
   margin-top: 0.5rem;
