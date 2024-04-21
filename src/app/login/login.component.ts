@@ -26,11 +26,14 @@ export class LoginComponent {
     this.authService.login(username, password).subscribe({
       next: (res: any) => {
         console.log('Logged in with token:', res.token);
-        this.router.navigate(['/product-list']);
       },
       error: (error: any) => {
         console.error('Login error', error);
       },
+      complete: () => {
+        console.log('Login complete');
+        this.router.navigate(['/product-list']);
+      }
     });
   }
 

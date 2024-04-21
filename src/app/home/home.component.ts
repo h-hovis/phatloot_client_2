@@ -23,6 +23,6 @@ export class HomeComponent {
   }
 
   login() {
-    this.authService.login('username', 'password');
+    this.router.navigate(['/login']);
   }
 }

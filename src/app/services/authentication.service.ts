@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
-import { BehaviorSubject } from 'rxjs';
+import { BehaviorSubject, ObservableInput, switchMap } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -16,7 +16,12 @@ export class AuthenticationService {
     return this.http.post<{ token: string }>('http://localhost:3000/login', {
       username,
       password,
-    });
+    }).pipe(
+      switchMap((res) => {
+        this.setToken(res.token);
+        return this.tokenSubject;
+      })
+    )
   }
 
   signUp(user: any) {
